@@ -1,5 +1,5 @@
-# Google-translator-using-python
-This repository contains a simple Google Translator application built using the googletrans and gtts (Google Text-to-Speech) libraries in Python. The application allows users to translate text from one language to another and convert the translated text into speech.
+# Language-translator-using-python
+This repository contains a simple Language Translator application built using the googletrans and gtts (Google Text-to-Speech) libraries in Python. The application allows users to translate text from one language to another and convert the translated text into speech.
 # Language Translator
 
 A simple language translator application built using the Streamlit framework and the Google Translate API.
