@@ -1,8 +1,5 @@
 # Language-translator-using-python
-This repository contains a simple Language Translator application built using the googletrans and gtts (Google Text-to-Speech) libraries in Python. The application allows users to translate text from one language to another and convert the translated text into speech.
-# Language Translator
-
-A simple language translator application built using the Streamlit framework and the Google Translate API.
+A high-performance, modern language translation web application built with Streamlit. This app supports over 100+ global languages and converts translated text into speech instantly.
 
 ## Installation
 
@@ -13,7 +10,7 @@ https://github.com/onkar0127/Language-translator-using-python.git
 
 2. Install the required dependencies:
 ```
-pip install -r requirements.txt
+pip install streamlit deep-translator gTTS
 ```
 
 ## Usage
@@ -35,12 +32,14 @@ streamlit run translator.py
 
 7. You can download the audio translation by clicking the "Download Audio" button.
 
-## API
+## API & Library Reference
+The application uses the following open-source libraries to interface with Google's translation and speech engines without requiring a paid API key:
 
-The application uses the following APIs:
+[Deep-Translator](https://pypi.org/project/deep-translator/): Used for the core translation logic. It replaces the older googletrans library to provide better stability and compatibility with Python 3.13+. It handles over 100+ languages dynamically.
 
-- [Google Translate API](https://cloud.google.com/translate/docs) for text translation.
-- [Google Text-to-Speech (gTTS) API](https://pypi.org/project/gTTS/) for audio conversion.
+[gTTS (Google Text-to-Speech)](https://pypi.org/project/gTTS/): Converts the translated string into a natural-sounding voice. The audio is processed in-memory using BytesIO for faster performance and privacy.
+
+[Streamlit](https://streamlit.io/): Powers the web interface and handles the Session State, ensuring that text and audio stay synchronized when you switch languages.
 
 ## Contributing
 
@@ -56,12 +55,3 @@ If you would like to contribute to this project, please follow these steps:
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Testing
-
-To run the tests for this project, use the following command:
-
-```
-pytest tests/
-```
-
-This will run all the tests defined in the `tests/` directory.
